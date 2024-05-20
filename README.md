@@ -2,4 +2,4 @@
 
 ExtJS 3.4 sample demo file
 
-![ExtJSDemo](https://github.com/DigitalBox98/ExtJSDemo/assets/57635141/65dd299f-89b7-4aa8-8103-e2de129f3ffb)
+<img width="563" alt="Demo" src="https://github.com/DigitalBox98/ExtJSDemo/assets/57635141/ad0bd38f-3cc1-416e-a547-c897219abda5">
