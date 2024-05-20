@@ -1,17 +1,9 @@
 /*
-ExtJS 3.4 sample app 
+ExtJS 3.4 Demo App 
 
 */
 Ext.onReady(function(){
     var win;
-
-	var jsonData = {
-        "users": [
-            { "id": 1, "name": "John Doe", "email": "john@example.com" },
-            { "id": 2, "name": "Jane Smith", "email": "jane@example.com" },
-            { "id": 3, "name": "Alice Johnson", "email": "alice@example.com" }
-        ]
-    };
 	
 	jsonStoreData = {
         "data": [
@@ -20,27 +12,6 @@ Ext.onReady(function(){
         ]
     };
 	
-	
-    var store = new Ext.data.Store({
-        reader: new Ext.data.JsonReader({
-            root: 'users',
-            fields: ['id', 'name', 'email']
-        }),
-        data: jsonData
-    });
-	
-    new Ext.grid.GridPanel({
-        renderTo: Ext.getBody(),
-        store: store,
-        width: 400,
-        height: 200,
-        title: 'Users data',
-        columns: [
-            { header: 'ID', dataIndex: 'id' },
-            { header: 'Name', dataIndex: 'name' },
-            { header: 'Email', dataIndex: 'email', flex: 1 }
-        ]
-    });
 
 	// Main Card panel
 	MainCardPanel = Ext.extend(Ext.Panel, {
@@ -54,11 +25,6 @@ Ext.onReady(function(){
 							new PanelServices({
 									owner: this.owner
 								})
-							// new Ext.TabPanel({
-							// xtype: 'panel',
-							// border: false,
-							// html: '<h2>Hello World!</h2>'
-							// }),
 				],
 				border: false,
 				listeners: {
@@ -161,7 +127,6 @@ Ext.onReady(function(){
 			var records = this.getSelectionModel().getSelections();
 			if (records.length != 0) {
 				this.store.remove(this.getSelectionModel().getSelections());
-				this.store.save();
 			}
 		},		
 	});	
@@ -306,7 +271,6 @@ Ext.onReady(function(){
 				this.record.set("status_command", this.panel.getForm().findField("status_command").getValue());
 				this.record.endEdit();
 			}
-			this.store.save();
 			this.close();
 		},
 		onClickClose: function () {
@@ -318,7 +282,7 @@ Ext.onReady(function(){
 	// Create the window with the MainCardPanel 
 	if(!win){
 		win = new Ext.Window({
-			title:'Hello App',
+			title:'Demo App',
 			layout:'fit',
 			width:500,
 			height:300,
