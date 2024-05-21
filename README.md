@@ -8,6 +8,8 @@ ExtJS 3.4 sample demo file
 
 ExtJS 3.4 sample demo file for DSM 
 
+Check the details on how to convert ExtJS 3.4 to DSM in the <a href="https://github.com/DigitalBox98/ExtJSDemo/wiki">wiki</a>
+
 Please check the below link for sources :
 https://github.com/DigitalBox98/spksrc/tree/ExtJSDemo/spk/extjsdemo
 
